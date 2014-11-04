@@ -23,6 +23,7 @@ class UsersController < ApplicationController
     access_token = client.auth_code.get_token(params[:code], :redirect_uri => 'http://localhost:3000/callback')
     #Stores all the Information that Google Sends Back In Variable For Later Use
     google_profile = access_token.get('https://www.googleapis.com/oauth2/v1/userinfo?alt=json')
+    google_gmail = access_token.get
     #Gets the Info Specifically About the signed in User
     user_info = JSON.parse(google_profile.body)
     emails = JSON.parse(google_profile.body)
