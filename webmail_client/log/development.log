@@ -1,0 +1,1529 @@
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-03 21:03:21 -0500
+
+ActiveRecord::NoDatabaseError (FATAL:  database "webmail_client_development" does not exist
+Run `$ bin/rake db:create db:migrate` to create your database):
+  activerecord (4.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:898:in `rescue in connect'
+  activerecord (4.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:888:in `connect'
+  activerecord (4.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:568:in `initialize'
+  activerecord (4.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `new'
+  activerecord (4.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `postgresql_connection'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:435:in `new_connection'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:445:in `checkout_new_connection'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:416:in `acquire_connection'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:351:in `block in checkout'
+  /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/2.0.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:350:in `checkout'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:265:in `block in connection'
+  /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/2.0.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:264:in `connection'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:541:in `retrieve_connection'
+  activerecord (4.1.6) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.1.6) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.1.6) lib/active_record/migration.rb:388:in `check_pending!'
+  activerecord (4.1.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (54.9ms)
+  [1m[36m (4.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (3.0ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20141104002818)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (9.4ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "name" character varying(255), "email" character varying(255), "photo" character varying(255), "oauthtoken" character varying(255), "oauthrefresh" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141104002818"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+Migrating to CreateMessages (20141104003322)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (6.7ms)[0m  [1mCREATE TABLE "messages" ("id" serial primary key, "subject" character varying(255), "body" character varying(255), "sender_id" integer, "receiver_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141104003322"]]
+  [1m[36m (1.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-03 21:07:06 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+RuntimeError (Circular dependency detected while autoloading constant UsersHelper):
+  app/controllers/application_controller.rb:1:in `<top (required)>'
+  app/controllers/users_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.4ms)
+  Rendered /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (102.4ms)
+  Rendered /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (129.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-03 21:08:45 -0500
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 1961ms (Views: 1960.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-03 21:08:47 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-03 21:08:47 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-03 21:08:47 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-03 21:08:47 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-03 21:08:47 -0500
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2014-11-03 21:08:47 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-03 21:08:47 -0500
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2014-11-03 21:08:47 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-03 21:08:47 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-03 21:18:45 -0500
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 120ms (Views: 118.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-03 21:18:46 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-03 21:18:46 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-03 21:18:46 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-03 21:18:46 -0500
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2014-11-03 21:18:46 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-03 21:18:46 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-03 21:18:46 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-03 21:18:46 -0500
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2014-11-03 21:18:46 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-03 21:18:57 -0500
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 71ms (Views: 69.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-03 21:18:57 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-03 21:18:57 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-03 21:18:57 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-03 21:18:57 -0500
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2014-11-03 21:18:57 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-03 21:18:57 -0500
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2014-11-03 21:18:57 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-03 21:18:57 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-03 21:18:57 -0500
+
+
+Started GET "/auth" for 127.0.0.1 at 2014-11-03 21:18:58 -0500
+Processing by UsersController#auth as HTML
+Completed 500 Internal Server Error in 6ms
+
+NameError (undefined local variable or method `client' for #<UsersController:0x007f8f1f102858>):
+  app/controllers/users_controller.rb:10:in `auth'
+
+
+  Rendered /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.3ms)
+  Rendered /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (30.2ms)
+
+
+Started GET "/auth" for 127.0.0.1 at 2014-11-03 21:18:58 -0500
+Processing by UsersController#auth as HTML
+Completed 500 Internal Server Error in 128ms
+
+NameError (undefined local variable or method `client' for #<UsersController:0x007f8f1f2435a0>):
+  app/controllers/users_controller.rb:10:in `auth'
+
+
+  Rendered /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (31.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-03 21:20:58 -0500
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 77ms (Views: 75.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-03 21:20:58 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-03 21:20:58 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-03 21:20:58 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-03 21:20:58 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-03 21:20:58 -0500
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2014-11-03 21:20:58 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-03 21:20:58 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-03 21:20:58 -0500
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2014-11-03 21:20:58 -0500
+
+
+Started GET "/auth" for 127.0.0.1 at 2014-11-03 21:21:01 -0500
+Processing by UsersController#auth as HTML
+Completed 500 Internal Server Error in 2ms
+
+NameError (uninitialized constant UsersController::OAuth2):
+  app/controllers/users_controller.rb:14:in `client'
+  app/controllers/users_controller.rb:10:in `auth'
+
+
+  Rendered /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (25.5ms)
+
+
+Started GET "/auth" for 127.0.0.1 at 2014-11-03 21:21:01 -0500
+Processing by UsersController#auth as HTML
+Completed 500 Internal Server Error in 2ms
+
+NameError (uninitialized constant UsersController::OAuth2):
+  app/controllers/users_controller.rb:14:in `client'
+  app/controllers/users_controller.rb:10:in `auth'
+
+
+  Rendered /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (25.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-03 21:28:01 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 368ms (Views: 334.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-03 21:28:02 -0500
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2014-11-03 21:28:02 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-03 21:28:02 -0500
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2014-11-03 21:28:02 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-03 21:28:02 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-03 21:28:02 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-03 21:28:02 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-03 21:28:02 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-03 21:28:02 -0500
+
+
+Started GET "/auth" for 127.0.0.1 at 2014-11-03 21:28:06 -0500
+Processing by UsersController#auth as HTML
+Completed 500 Internal Server Error in 2ms
+
+NameError (uninitialized constant UsersController::CLIENT_ID):
+  app/controllers/users_controller.rb:14:in `client'
+  app/controllers/users_controller.rb:10:in `auth'
+
+
+  Rendered /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.3ms)
+
+
+Started GET "/auth" for 127.0.0.1 at 2014-11-03 21:28:06 -0500
+Processing by UsersController#auth as HTML
+Completed 500 Internal Server Error in 2ms
+
+NameError (uninitialized constant UsersController::CLIENT_ID):
+  app/controllers/users_controller.rb:14:in `client'
+  app/controllers/users_controller.rb:10:in `auth'
+
+
+  Rendered /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.4ms)
+  Rendered /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (27.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-03 21:29:04 -0500
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 70ms (Views: 68.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-03 21:29:04 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-03 21:29:04 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-03 21:29:04 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-03 21:29:04 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-03 21:29:04 -0500
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2014-11-03 21:29:04 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-03 21:29:04 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-03 21:29:04 -0500
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2014-11-03 21:29:04 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-03 21:29:20 -0500
+
+SyntaxError (/Users/steveono/Desktop/webmail-client/webmail_client/app/controllers/users_controller.rb:14: syntax error, unexpected ']', expecting ')'
+...h2::Client.new("ENV[CLIENT_ID"], ENV["CLIENT_SECRET"], {
+...                               ^
+/Users/steveono/Desktop/webmail-client/webmail_client/app/controllers/users_controller.rb:18: syntax error, unexpected ')', expecting :: or '[' or '.'
+/Users/steveono/Desktop/webmail-client/webmail_client/app/controllers/users_controller.rb:36: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/controllers/users_controller.rb:14: syntax error, unexpected ']', expecting ')'
+  app/controllers/users_controller.rb:18: syntax error, unexpected ')', expecting :: or '[' or '.'
+  app/controllers/users_controller.rb:36: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-03 21:29:51 -0500
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 150ms (Views: 148.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-03 21:29:52 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-03 21:29:52 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-03 21:29:52 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-03 21:29:52 -0500
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2014-11-03 21:29:52 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-03 21:29:52 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-03 21:29:52 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-03 21:29:52 -0500
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2014-11-03 21:29:52 -0500
+
+
+Started GET "/auth" for 127.0.0.1 at 2014-11-03 21:29:53 -0500
+Processing by UsersController#auth as HTML
+Redirected to https://accounts.google.com/o/oauth2/auth?access_type=offline&client_id=1052159283879-9jdachjt409movd191jk441965s3td9v.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fcallback&response_type=code&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email
+Completed 403 Forbidden in 77ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-03 21:34:31 -0500
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 148ms (Views: 146.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-03 21:34:31 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-03 21:34:31 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-03 21:34:31 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-03 21:34:31 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-03 21:34:31 -0500
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2014-11-03 21:34:31 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-03 21:34:31 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-03 21:34:31 -0500
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2014-11-03 21:34:32 -0500
+
+
+Started GET "/auth" for 127.0.0.1 at 2014-11-03 21:34:33 -0500
+Processing by UsersController#auth as HTML
+Redirected to https://accounts.google.com/o/oauth2/auth?access_type=offline&client_id=1052159283879-9jdachjt409movd191jk441965s3td9v.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fcallback&response_type=code&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email
+Completed 403 Forbidden in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-03 21:35:32 -0500
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 72ms (Views: 71.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-03 21:35:32 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-03 21:35:32 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-03 21:35:32 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-03 21:35:32 -0500
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2014-11-03 21:35:32 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-03 21:35:32 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-03 21:35:32 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-03 21:35:32 -0500
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2014-11-03 21:35:32 -0500
+
+
+Started GET "/auth" for 127.0.0.1 at 2014-11-03 21:35:33 -0500
+Processing by UsersController#auth as HTML
+Redirected to https://accounts.google.com/o/oauth2/auth?access_type=offline&client_id=1052159283879-9jdachjt409movd191jk441965s3td9v.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fcallback&response_type=code&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email
+Completed 403 Forbidden in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/callback?error=access_denied" for 127.0.0.1 at 2014-11-03 21:41:35 -0500
+Processing by UsersController#callback as HTML
+  Parameters: {"error"=>"access_denied"}
+Completed 500 Internal Server Error in 5769ms
+
+OAuth2::Error (invalid_request: Missing required parameter: code
+{
+  "error" : "invalid_request",
+  "error_description" : "Missing required parameter: code"
+}):
+  app/controllers/users_controller.rb:23:in `callback'
+
+
+  Rendered /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-03 21:42:02 -0500
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 179ms (Views: 177.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-03 21:42:02 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-03 21:42:02 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-03 21:42:02 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-03 21:42:02 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-03 21:42:02 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-03 21:42:02 -0500
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2014-11-03 21:42:02 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-03 21:42:02 -0500
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2014-11-03 21:42:02 -0500
+
+
+Started GET "/auth" for 127.0.0.1 at 2014-11-03 21:42:03 -0500
+Processing by UsersController#auth as HTML
+Redirected to https://accounts.google.com/o/oauth2/auth?access_type=offline&client_id=1052159283879-9jdachjt409movd191jk441965s3td9v.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fcallback&response_type=code&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email
+Completed 403 Forbidden in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/callback?code=4/aZRrTLPW-Rd8QmSEa_S4-4TU_LkRloj6crD41Ya7u3A.0kpJFGsSbLMXgtL038sCVnvXNGDxkgI" for 127.0.0.1 at 2014-11-03 21:42:07 -0500
+Processing by UsersController#callback as HTML
+  Parameters: {"code"=>"4/aZRrTLPW-Rd8QmSEa_S4-4TU_LkRloj6crD41Ya7u3A.0kpJFGsSbLMXgtL038sCVnvXNGDxkgI"}
+  [1m[35mUser Load (37.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'steveono@gmail.com' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-11-04 02:42:12.498228"], ["email", "steveono@gmail.com"], ["updated_at", "2014-11-04 02:42:12.498228"]]
+  [1m[36m (17.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "users" SET "name" = $1, "oauthrefresh" = $2, "oauthtoken" = $3, "photo" = $4, "updated_at" = $5 WHERE "users"."id" = 1[0m  [["name", "Steve Ono"], ["oauthrefresh", "1/3AJIwGZjjsleo9PT-HzTY9lygga6hgCq-OTGGKCnCEs"], ["oauthtoken", "ya29.tAA3qx75uTDOMXg5r96srPG2TeWyEgz7mX-f4uBMmv7MEljkVwz4ZqiKSdaIp2C_cSAqnREtdx1usA"], ["photo", "https://lh3.googleusercontent.com/-QElKBPRYOU0/AAAAAAAAAAI/AAAAAAAAAKI/L_VZgCNKi9E/photo.jpg"], ["updated_at", "2014-11-04 02:42:12.543439"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 4950ms (ActiveRecord: 62.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-03 21:42:12 -0500
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 79ms (Views: 77.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-03 21:42:12 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-03 21:42:12 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-03 21:42:12 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-03 21:42:12 -0500
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2014-11-03 21:42:12 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-03 21:42:12 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-03 21:42:12 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-03 21:42:12 -0500
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2014-11-03 21:42:12 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-03 21:42:12 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-03 21:42:12 -0500
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2014-11-03 21:42:12 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-03 21:42:12 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-03 21:42:13 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-03 21:55:40 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (4.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered users/index.html.erb within layouts/application (29.9ms)
+Completed 200 OK in 100ms (Views: 88.1ms | ActiveRecord: 10.2ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-03 21:55:40 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-03 21:55:40 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-03 21:55:40 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-03 21:55:40 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-03 21:55:40 -0500
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2014-11-03 21:55:40 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-03 21:55:40 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-03 21:55:40 -0500
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2014-11-03 21:55:40 -0500
+
+
+Started GET "/auth" for 127.0.0.1 at 2014-11-03 21:55:43 -0500
+Processing by UsersController#auth as HTML
+Redirected to https://accounts.google.com/o/oauth2/auth?access_type=offline&client_id=1052159283879-9jdachjt409movd191jk441965s3td9v.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fcallback&response_type=code&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email
+Completed 403 Forbidden in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/callback?code=4/R__7bHKIA9NCoSFgHSaHDD4AwAg7yt1sKc_9_3LtGco.EpviZtmZdGcegtL038sCVntPIXnxkgI" for 127.0.0.1 at 2014-11-03 21:55:44 -0500
+Processing by UsersController#callback as HTML
+  Parameters: {"code"=>"4/R__7bHKIA9NCoSFgHSaHDD4AwAg7yt1sKc_9_3LtGco.EpviZtmZdGcegtL038sCVntPIXnxkgI"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'steveono@gmail.com' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "oauthrefresh" = $1, "oauthtoken" = $2, "updated_at" = $3 WHERE "users"."id" = 1  [["oauthrefresh", nil], ["oauthtoken", "ya29.tABRJ_6W4DJiFeRFNQyh3HzsOdUR5kDd73JC3Yg7VbBUGWscEPgOFxgEfSCpV9B_zZlVFRn8-BIRJg"], ["updated_at", "2014-11-04 02:55:45.401240"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 1094ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-03 21:55:45 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  Rendered users/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 173ms (Views: 171.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-03 21:55:45 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-03 21:55:45 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-03 21:55:45 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-03 21:55:45 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-03 21:55:45 -0500
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2014-11-03 21:55:45 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-03 21:55:45 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-03 21:55:45 -0500
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2014-11-03 21:55:45 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-03 21:57:00 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 94ms (Views: 69.4ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-03 21:57:01 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-03 21:57:01 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-03 21:57:01 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-03 21:57:01 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-03 21:57:01 -0500
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2014-11-03 21:57:01 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-03 21:57:01 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-03 21:57:01 -0500
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2014-11-03 21:57:01 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-03 21:57:18 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 217ms (Views: 214.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-03 21:57:19 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-03 21:57:19 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-03 21:57:19 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-03 21:57:19 -0500
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2014-11-03 21:57:19 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-03 21:57:19 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-03 21:57:19 -0500
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2014-11-03 21:57:19 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-03 21:57:19 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-03 21:57:30 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered users/index.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 87ms (Views: 81.5ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-03 21:57:30 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-03 21:57:30 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-03 21:57:30 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-03 21:57:30 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-03 21:57:30 -0500
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2014-11-03 21:57:30 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-03 21:57:30 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-03 21:57:30 -0500
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2014-11-03 21:57:30 -0500
+
+
+Started GET "/callback?code=4/GgPs2Eanna3bpwXWcDoI4COPisqodU1VsPB520swY0g.EgffKAzf3J8UJvIeHux6iLaFiXzxkgI" for 127.0.0.1 at 2014-11-03 21:57:35 -0500
+Processing by UsersController#callback as HTML
+  Parameters: {"code"=>"4/GgPs2Eanna3bpwXWcDoI4COPisqodU1VsPB520swY0g.EgffKAzf3J8UJvIeHux6iLaFiXzxkgI"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'steveono@gmail.com' LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "users" SET "oauthtoken" = $1, "updated_at" = $2 WHERE "users"."id" = 1  [["oauthtoken", "ya29.tAA7jfZeTpxJ87r94-GFOlXB_Ds_50QXvv4wbgjY7ijeWgsz28o0K07GkW53Eh9h2nXygS26Ml-Hkw"], ["updated_at", "2014-11-04 02:57:37.271323"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 1303ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-03 21:57:37 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  Rendered users/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 163ms (Views: 160.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-03 21:57:38 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-03 21:57:38 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-03 21:57:38 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-03 21:57:38 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-03 21:57:38 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-03 21:57:38 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-03 21:57:38 -0500
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2014-11-03 21:57:38 -0500
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2014-11-03 21:57:38 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-03 21:58:16 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered users/index.html.erb within layouts/application (23.3ms)
+Completed 200 OK in 89ms (Views: 81.2ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-03 21:58:16 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-03 21:58:16 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-03 21:58:16 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-03 21:58:16 -0500
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2014-11-03 21:58:16 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-03 21:58:16 -0500
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2014-11-03 21:58:16 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-03 21:58:16 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-03 21:58:16 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-03 21:58:27 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  Rendered users/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 107ms (Views: 104.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-03 21:58:27 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-03 21:58:28 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-03 21:58:28 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-03 21:58:28 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-03 21:58:28 -0500
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2014-11-03 21:58:28 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-03 21:58:28 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-03 21:58:28 -0500
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2014-11-03 21:58:28 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-03 22:00:28 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered users/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 78ms (Views: 75.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-03 22:00:28 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-03 22:00:28 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-03 22:00:28 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-03 22:00:28 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-03 22:00:28 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-03 22:00:28 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-03 22:00:28 -0500
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2014-11-03 22:00:28 -0500
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2014-11-03 22:00:28 -0500
+
+
+Started GET "/logout" for 127.0.0.1 at 2014-11-03 22:00:46 -0500
+
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.0ms)
+  Rendered /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (107.6ms)
+  Rendered /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (174.7ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2014-11-03 22:00:47 -0500
+
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.5ms)
+  Rendered /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
+  Rendered /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (40.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-03 22:04:56 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  Rendered users/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 100ms (Views: 98.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-03 22:04:57 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-03 22:04:57 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-03 22:04:57 -0500
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2014-11-03 22:04:57 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-03 22:04:57 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-03 22:04:57 -0500
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2014-11-03 22:04:57 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-03 22:04:57 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-03 22:04:57 -0500
+
+
+Started POST "/logout" for 127.0.0.1 at 2014-11-03 22:04:59 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"8Mn5IFZ+Gd2/IdXfD0rCQ2yfBjhvZ0mvAgZo4oAnpn0="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-03 22:04:59 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered users/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 122ms (Views: 120.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-03 22:05:00 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-03 22:05:00 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-03 22:05:00 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-03 22:05:00 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-03 22:05:00 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-03 22:05:00 -0500
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2014-11-03 22:05:00 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-03 22:05:00 -0500
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2014-11-03 22:05:00 -0500
+
+
+Started GET "/auth" for 127.0.0.1 at 2014-11-03 22:05:01 -0500
+Processing by UsersController#auth as HTML
+Redirected to https://accounts.google.com/o/oauth2/auth?access_type=offline&client_id=1052159283879-9jdachjt409movd191jk441965s3td9v.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fcallback&response_type=code&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email
+Completed 403 Forbidden in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/callback?code=4/k67yX35PUQz3LgBp2CVg9NQNjxcNGhzCbM5EC5ivFVY.IjsMkbKzWHsfgtL038sCVnsRKYrxkgI" for 127.0.0.1 at 2014-11-03 22:05:02 -0500
+Processing by UsersController#callback as HTML
+  Parameters: {"code"=>"4/k67yX35PUQz3LgBp2CVg9NQNjxcNGhzCbM5EC5ivFVY.IjsMkbKzWHsfgtL038sCVnsRKYrxkgI"}
+Completed 500 Internal Server Error in 5443ms
+
+OAuth2::Error (internal_failure: 
+{
+  "error" : "internal_failure"
+}):
+  app/controllers/users_controller.rb:23:in `callback'
+
+
+  Rendered /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-03 22:15:06 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+  Rendered users/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 97ms (Views: 95.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-03 22:15:06 -0500
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2014-11-03 22:15:06 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-03 22:15:06 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-03 22:15:06 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-03 22:15:06 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-03 22:15:06 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-03 22:15:06 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-03 22:15:06 -0500
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2014-11-03 22:15:06 -0500
+
+
+Started GET "/auth" for 127.0.0.1 at 2014-11-03 22:15:07 -0500
+Processing by UsersController#auth as HTML
+Redirected to https://accounts.google.com/o/oauth2/auth?access_type=offline&client_id=1052159283879-9jdachjt409movd191jk441965s3td9v.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fcallback&response_type=code&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email
+Completed 403 Forbidden in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/callback?code=4/6K63CfThOaVVirSGYEHNI3HBXVPJudTJhrSMR1dSNp8.ort-BtSsu4wRgtL038sCVnuXp5zxkgI" for 127.0.0.1 at 2014-11-03 22:15:08 -0500
+Processing by UsersController#callback as HTML
+  Parameters: {"code"=>"4/6K63CfThOaVVirSGYEHNI3HBXVPJudTJhrSMR1dSNp8.ort-BtSsu4wRgtL038sCVnuXp5zxkgI"}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'steveono@gmail.com' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "users" SET "oauthtoken" = $1, "updated_at" = $2 WHERE "users"."id" = 1[0m  [["oauthtoken", "ya29.tAA1BcN4X2Z9GY_r4SqnIxE3ZoTqagkDpuEHLThWewUg2-6_IYmsh33iIxeHZyR6mu0A1T_q8qMhsg"], ["updated_at", "2014-11-04 03:15:09.199994"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 863ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-03 22:15:09 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered users/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 223ms (Views: 220.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-03 22:15:09 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-03 22:15:09 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-03 22:15:09 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-03 22:15:09 -0500
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2014-11-03 22:15:09 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-03 22:15:09 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-03 22:15:09 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-03 22:15:09 -0500
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2014-11-03 22:15:09 -0500
+
+
+Started POST "/logout" for 127.0.0.1 at 2014-11-03 22:15:14 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"NxrakBPEQowQwaVMjxTKIXgjZ1E7yaRLRrsNOqKjOqs="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-03 22:15:14 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+  Rendered users/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 82ms (Views: 79.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-03 22:15:14 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-03 22:15:14 -0500
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2014-11-03 22:15:14 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-03 22:15:14 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-03 22:15:14 -0500
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2014-11-03 22:15:14 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-03 22:15:14 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-03 22:15:14 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-03 22:15:14 -0500
+
+
+Started GET "/auth" for 127.0.0.1 at 2014-11-03 22:15:16 -0500
+Processing by UsersController#auth as HTML
+Redirected to https://accounts.google.com/o/oauth2/auth?access_type=offline&client_id=1052159283879-9jdachjt409movd191jk441965s3td9v.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fcallback&response_type=code&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email
+Completed 403 Forbidden in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/callback?code=4/5vYN7q5svMM4FfyFEwSEzsVu5f2xV5246NDaGybkDSA.Urg5qHooBYMaJvIeHux6iLZh65zxkgI" for 127.0.0.1 at 2014-11-03 22:15:17 -0500
+Processing by UsersController#callback as HTML
+  Parameters: {"code"=>"4/5vYN7q5svMM4FfyFEwSEzsVu5f2xV5246NDaGybkDSA.Urg5qHooBYMaJvIeHux6iLZh65zxkgI"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'steveono@gmail.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "users" SET "oauthtoken" = $1, "updated_at" = $2 WHERE "users"."id" = 1[0m  [["oauthtoken", "ya29.tAAyfjTWHXJn2eF_yO3DZSm85lDGy5SzosfAYLAqFkGKc0n4eCyA7qJ09uo42UGRCAAmm4bvmyczbg"], ["updated_at", "2014-11-04 03:15:18.337235"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 1328ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-03 22:15:18 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered users/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 125ms (Views: 123.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-03 22:15:18 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-03 22:15:18 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-03 22:15:18 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-03 22:15:18 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-03 22:15:18 -0500
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2014-11-03 22:15:18 -0500
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2014-11-03 22:15:18 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-03 22:15:18 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-03 22:15:18 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-03 22:21:59 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (1.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  Rendered users/index.html.erb within layouts/application (40.1ms)
+Completed 200 OK in 218ms (Views: 211.3ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2014-11-03 22:21:59 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-03 22:21:59 -0500
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2014-11-03 22:21:59 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-03 22:21:59 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-03 22:21:59 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-03 22:22:00 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-03 22:22:00 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-03 22:22:00 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-03 22:22:00 -0500
+
+
+Started POST "/logout" for 127.0.0.1 at 2014-11-03 22:22:02 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"aY0CTU/GtUDeLRTvrgmhJDSfrG+mBjt6QSR1eZ/Wzto="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-03 22:22:02 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered users/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 212ms (Views: 210.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-03 22:22:02 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-03 22:22:02 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-03 22:22:02 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-03 22:22:02 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-03 22:22:02 -0500
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2014-11-03 22:22:02 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-03 22:22:02 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-03 22:22:02 -0500
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2014-11-03 22:22:02 -0500
+
+
+Started GET "/auth" for 127.0.0.1 at 2014-11-03 22:22:03 -0500
+Processing by UsersController#auth as HTML
+Redirected to https://accounts.google.com/o/oauth2/auth?access_type=offline&client_id=1052159283879-9jdachjt409movd191jk441965s3td9v.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fmail.google.com%2F&response_type=code
+Completed 403 Forbidden in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/auth" for 127.0.0.1 at 2014-11-03 22:22:50 -0500
+Processing by UsersController#auth as HTML
+Redirected to https://accounts.google.com/o/oauth2/auth?access_type=offline&client_id=1052159283879-9jdachjt409movd191jk441965s3td9v.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fcallback&response_type=code&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email
+Completed 403 Forbidden in 21ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/callback?code=4/yMLIS11-Q4TCCGzkAVPAEi1VjdGL2SA1s_PPhCo-uQs.MjoH-MgAW1cQgtL038sCVnubxarxkgI" for 127.0.0.1 at 2014-11-03 22:22:50 -0500
+Processing by UsersController#callback as HTML
+  Parameters: {"code"=>"4/yMLIS11-Q4TCCGzkAVPAEi1VjdGL2SA1s_PPhCo-uQs.MjoH-MgAW1cQgtL038sCVnubxarxkgI"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'steveono@gmail.com' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  UPDATE "users" SET "oauthtoken" = $1, "updated_at" = $2 WHERE "users"."id" = 1  [["oauthtoken", "ya29.tAB0fOOZ8s7sbr_UKeTMX0iDL_vrGZJQDgwXqvmNa_HH_HITZdaOg9ilwnADZYb5VrTTwR9FNJYKhw"], ["updated_at", "2014-11-04 03:22:52.237019"]]
+  [1m[36m (26.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 1336ms (ActiveRecord: 33.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-03 22:22:52 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  Rendered users/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 121ms (Views: 118.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-03 22:22:52 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-03 22:22:52 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-03 22:22:52 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-03 22:22:52 -0500
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2014-11-03 22:22:52 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-03 22:22:52 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-03 22:22:52 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-03 22:22:52 -0500
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2014-11-03 22:22:52 -0500
+
+
+Started POST "/logout" for 127.0.0.1 at 2014-11-03 23:02:28 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"pb/59k3iwOzIJn+457q9jySMewOoigLA5RIUXyorQws="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 33ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-03 23:02:29 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+  Rendered users/index.html.erb within layouts/application (65.6ms)
+Completed 200 OK in 430ms (Views: 427.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-03 23:02:30 -0500
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2014-11-03 23:02:30 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-03 23:02:30 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-03 23:02:30 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-03 23:02:30 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-03 23:02:30 -0500
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2014-11-03 23:02:30 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-03 23:02:30 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-03 23:02:30 -0500
+
+
+Started GET "/auth" for 127.0.0.1 at 2014-11-03 23:02:32 -0500
+Processing by UsersController#auth as HTML
+Redirected to https://accounts.google.com/o/oauth2/auth?access_type=offline&client_id=1052159283879-9jdachjt409movd191jk441965s3td9v.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fcallback&response_type=code&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email
+Completed 403 Forbidden in 122ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/callback?code=4/llnm4l1rvKoGJL_jhAC9mnmjaFSjqWpwiSa2Zi0nKY8.AvPtYJRiTrwUJvIeHux6iLZZdfPxkgI" for 127.0.0.1 at 2014-11-03 23:02:32 -0500
+Processing by UsersController#callback as HTML
+  Parameters: {"code"=>"4/llnm4l1rvKoGJL_jhAC9mnmjaFSjqWpwiSa2Zi0nKY8.AvPtYJRiTrwUJvIeHux6iLZZdfPxkgI"}
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'steveono@gmail.com' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mUPDATE "users" SET "oauthtoken" = $1, "updated_at" = $2 WHERE "users"."id" = 1[0m  [["oauthtoken", "ya29.tACN2vAyPEStb4zJAYzvdu5Vh7Hyaf_R7rKlmShMuDpDwaPn6b2rMEJSEhy_QQX6Mxorr6RxQ3cxAA"], ["updated_at", "2014-11-04 04:02:34.162164"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 1412ms (ActiveRecord: 8.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-03 23:02:34 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered users/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 70ms (Views: 68.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-03 23:02:34 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-03 23:02:34 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-03 23:02:34 -0500
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2014-11-03 23:02:34 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-03 23:02:34 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-03 23:02:34 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-03 23:02:34 -0500
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2014-11-03 23:02:34 -0500
