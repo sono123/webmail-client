@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
 
   root 'users#index'
-  get '/auth', :to => 'users#auth'
+  # get '/auth', :to => 'users#auth'
+  get 'auth/:provider/callback', to: 'users#create'
   get '/callback', :to => 'users#callback'
   post "/logout" => "sessions#destroy"
   resources :users
