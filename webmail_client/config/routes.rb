@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
 
   root 'users#index'
-  get '/auth', :to => 'users#auth'
-  get '/callback', :to => 'users#callback'
+  # get '/auth/google_oauth2', to: 'users#create'
+  get 'auth/:provider/callback', to: 'users#create'
+  get 'auth/failure', to: redirect('/')
   post "/logout" => "sessions#destroy"
   resources :users
   resources :messages

@@ -30,7 +30,10 @@ ActiveRecord::Schema.define(version: 20141104003322) do
     t.string   "email"
     t.string   "photo"
     t.string   "oauthtoken"
+    t.string   "password_digest"
     t.string   "oauthrefresh"
+    t.string   "provider"
+    t.string   "uid"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

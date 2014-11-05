@@ -5,7 +5,10 @@ class CreateUsers < ActiveRecord::Migration
       t.string :email
       t.string :photo
       t.string :oauthtoken
+      t.string :password_digest
       t.string :oauthrefresh
+      t.string :provider
+      t.string :uid
 
       t.timestamps
     end
