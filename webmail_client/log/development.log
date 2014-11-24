@@ -1527,3 +1527,487 @@ Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-03 23:02:34
 
 
 Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2014-11-03 23:02:34 -0500
+  [1m[36m (5.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (2.8ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20141104002818)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (9.3ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "name" character varying(255), "email" character varying(255), "photo" character varying(255), "oauthtoken" character varying(255), "oauthrefresh" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141104002818"]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+Migrating to CreateMessages (20141104003322)
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (7.7ms)[0m  [1mCREATE TABLE "messages" ("id" serial primary key, "subject" character varying(255), "body" character varying(255), "sender_id" integer, "receiver_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141104003322"]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.6ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-24 01:00:21 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/railties-4.1.6/lib/rails/templates/rails/welcome/index.html.erb (3.3ms)
+Completed 200 OK in 97ms (Views: 65.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-24 01:02:28 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (1.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  Rendered users/index.html.erb within layouts/application (59.5ms)
+Completed 200 OK in 423ms (Views: 420.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-24 01:02:28 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-24 01:02:28 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-24 01:02:28 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-24 01:02:29 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-24 01:02:29 -0500
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2014-11-24 01:02:29 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-24 01:02:29 -0500
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2014-11-24 01:02:29 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-24 01:02:29 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-24 01:08:39 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered users/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 133ms (Views: 130.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-24 01:08:39 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-24 01:08:39 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-24 01:08:39 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-24 01:08:39 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-24 01:08:39 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-24 01:08:39 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-24 01:08:39 -0500
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2014-11-24 01:08:39 -0500
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2014-11-24 01:08:39 -0500
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2014-11-24 01:08:42 -0500
+(google_oauth2) Request phase initiated.
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2014-11-24 01:08:42 -0500
+(google_oauth2) Request phase initiated.
+
+
+Started GET "/auth/google_oauth2/callback?state=f9020d0b749e7249d4cccddc5113cebe3c3bb66e16b6c1c3&code=4/Fzko5TKd69eEb2nNM4H8GvVDyYVO-sBoutrwKR6pXVU.wllnmpc90H0RJvIeHux6iLaZG9nAkwI" for 127.0.0.1 at 2014-11-24 01:08:51 -0500
+(google_oauth2) Callback phase initiated.
+Processing by UsersController#create as HTML
+  Parameters: {"state"=>"f9020d0b749e7249d4cccddc5113cebe3c3bb66e16b6c1c3", "code"=>"4/Fzko5TKd69eEb2nNM4H8GvVDyYVO-sBoutrwKR6pXVU.wllnmpc90H0RJvIeHux6iLaZG9nAkwI", "provider"=>"google_oauth2"}
+Completed 500 Internal Server Error in 7ms
+
+NoMethodError (undefined method `find_by_provider_and_uid' for #<Class:0x007fbf3d641a28>):
+  app/controllers/users_controller.rb:13:in `create'
+
+
+  Rendered /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (88.0ms)
+  [1m[36m (4.5ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (3.0ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20141104002818)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (8.4ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "name" character varying(255), "email" character varying(255), "photo" character varying(255), "oauthtoken" character varying(255), "oauthrefresh" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141104002818"]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+Migrating to CreateMessages (20141104003322)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (6.5ms)[0m  [1mCREATE TABLE "messages" ("id" serial primary key, "subject" character varying(255), "body" character varying(255), "sender_id" integer, "receiver_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141104003322"]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-24 01:15:48 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (1.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  Rendered users/index.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 204ms (Views: 186.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-24 01:15:49 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-24 01:15:49 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-24 01:15:49 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-24 01:15:49 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-24 01:15:49 -0500
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2014-11-24 01:15:49 -0500
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2014-11-24 01:15:49 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-24 01:15:49 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-24 01:15:49 -0500
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2014-11-24 01:15:52 -0500
+(google_oauth2) Request phase initiated.
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2014-11-24 01:15:52 -0500
+(google_oauth2) Request phase initiated.
+
+
+Started GET "/auth/google_oauth2/callback?state=c90a3fde987218becda8c83cb5b49f6c5ba573e31d3f3392&code=4/PpgMXyvjEdkWNyBvxDZqaNIFH5DuJXP2BJ9ki_uRA30.grwthNW-DXwTJvIeHux6iLYd-uXAkwI" for 127.0.0.1 at 2014-11-24 01:15:52 -0500
+(google_oauth2) Callback phase initiated.
+Processing by UsersController#create as HTML
+  Parameters: {"state"=>"c90a3fde987218becda8c83cb5b49f6c5ba573e31d3f3392", "code"=>"4/PpgMXyvjEdkWNyBvxDZqaNIFH5DuJXP2BJ9ki_uRA30.grwthNW-DXwTJvIeHux6iLYd-uXAkwI", "provider"=>"google_oauth2"}
+Completed 500 Internal Server Error in 8ms
+
+NoMethodError (undefined method `find_by_provider_and_uid' for #<Class:0x007f981afdb1a0>):
+  app/controllers/users_controller.rb:13:in `create'
+
+
+  Rendered /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.3ms)
+  Rendered /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (27.0ms)
+  [1m[36m (4.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (2.5ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20141104002818)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (7.9ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "name" character varying(255), "email" character varying(255), "photo" character varying(255), "oauthtoken" character varying(255), "oauthrefresh" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141104002818"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+Migrating to CreateMessages (20141104003322)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (6.5ms)[0m  [1mCREATE TABLE "messages" ("id" serial primary key, "subject" character varying(255), "body" character varying(255), "sender_id" integer, "receiver_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141104003322"]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-24 01:19:22 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (1.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  Rendered users/index.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 245ms (Views: 219.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-24 01:19:22 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-24 01:19:22 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-24 01:19:22 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-24 01:19:22 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-24 01:19:22 -0500
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2014-11-24 01:19:22 -0500
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2014-11-24 01:19:22 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-24 01:19:22 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-24 01:19:23 -0500
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2014-11-24 01:19:24 -0500
+(google_oauth2) Request phase initiated.
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2014-11-24 01:19:24 -0500
+(google_oauth2) Request phase initiated.
+
+
+Started GET "/auth/google_oauth2/callback?state=aebb4463070e13dccc8f2700b5475dcd6b6c3d021ae2511d&code=4/fNFgtGIi3x8AZuIsnAffaJ0pPhn5ZVcsAi93-k0vYMw.0q1tV_r_k1oXJvIeHux6iLa7cuzAkwI" for 127.0.0.1 at 2014-11-24 01:19:24 -0500
+(google_oauth2) Callback phase initiated.
+Processing by UsersController#create as HTML
+  Parameters: {"state"=>"aebb4463070e13dccc8f2700b5475dcd6b6c3d021ae2511d", "code"=>"4/fNFgtGIi3x8AZuIsnAffaJ0pPhn5ZVcsAi93-k0vYMw.0q1tV_r_k1oXJvIeHux6iLa7cuzAkwI", "provider"=>"google_oauth2"}
+Completed 500 Internal Server Error in 8ms
+
+NoMethodError (undefined method `find_by_provider_and_uid' for #<Class:0x007fa053eb3138>):
+  app/controllers/users_controller.rb:13:in `create'
+
+
+  Rendered /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-24 01:36:51 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered users/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 73ms (Views: 70.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-24 01:36:52 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-24 01:36:52 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-24 01:36:52 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-24 01:36:52 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-24 01:36:52 -0500
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2014-11-24 01:36:52 -0500
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2014-11-24 01:36:52 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-24 01:36:52 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-24 01:36:52 -0500
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2014-11-24 01:36:55 -0500
+(google_oauth2) Request phase initiated.
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2014-11-24 01:36:55 -0500
+(google_oauth2) Request phase initiated.
+
+
+Started GET "/auth/google_oauth2/callback?state=44314912f3c4831e9932a209736ce91da90db41ce1ab51cd&code=4/_X9xykO5AIPmxoGSL_lgy48UCyCdMWZlGukfuCN9lpE.ooQy34wz7-ERJvIeHux6iLbpgwzBkwI" for 127.0.0.1 at 2014-11-24 01:36:55 -0500
+(google_oauth2) Callback phase initiated.
+Processing by UsersController#create as HTML
+  Parameters: {"state"=>"44314912f3c4831e9932a209736ce91da90db41ce1ab51cd", "code"=>"4/_X9xykO5AIPmxoGSL_lgy48UCyCdMWZlGukfuCN9lpE.ooQy34wz7-ERJvIeHux6iLbpgwzBkwI", "provider"=>"google_oauth2"}
+Completed 500 Internal Server Error in 6ms
+
+NoMethodError (undefined method `find_by_provider_and_uid' for #<Class:0x007fa05539a808>):
+  app/controllers/users_controller.rb:13:in `create'
+
+
+  Rendered /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/steveono/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.1ms)
+  [1m[36m (4.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (2.6ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20141104002818)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (8.2ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "email" character varying(255), "password_digest" character varying(255), "name" character varying(255), "avatar" character varying(255), "provider" character varying(255), "uid" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141104002818"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+Migrating to CreateMessages (20141104003322)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (6.7ms)[0m  [1mCREATE TABLE "messages" ("id" serial primary key, "subject" character varying(255), "body" character varying(255), "sender_id" integer, "receiver_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141104003322"]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-24 01:54:16 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (1.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  Rendered users/index.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 218ms (Views: 200.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-24 01:54:17 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-24 01:54:17 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-24 01:54:17 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-24 01:54:17 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-24 01:54:17 -0500
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2014-11-24 01:54:17 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-24 01:54:17 -0500
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2014-11-24 01:54:17 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-24 01:54:17 -0500
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2014-11-24 01:54:18 -0500
+(google_oauth2) Request phase initiated.
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2014-11-24 01:54:18 -0500
+(google_oauth2) Request phase initiated.
+
+
+Started GET "/auth/google_oauth2/callback?state=3e924e0fe4426e260ac793e5e518930f37c58fe77a06ae37&code=4/vpd17WwZFcMogmvfiKFPd62qXOEOeEBFt_F2WycrRTo.QrnybjKZgYgRgtL038sCVnu_XCzBkwI" for 127.0.0.1 at 2014-11-24 01:54:19 -0500
+(google_oauth2) Callback phase initiated.
+Processing by UsersController#create as HTML
+  Parameters: {"state"=>"3e924e0fe4426e260ac793e5e518930f37c58fe77a06ae37", "code"=>"4/vpd17WwZFcMogmvfiKFPd62qXOEOeEBFt_F2WycrRTo.QrnybjKZgYgRgtL038sCVnu_XCzBkwI", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (1.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."provider" = 'google_oauth2' AND "users"."uid" = '108751959776616224101' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "users" ("avatar", "created_at", "email", "name", "provider", "uid", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["avatar", "https://lh3.googleusercontent.com/-QElKBPRYOU0/AAAAAAAAAAI/AAAAAAAAAKI/L_VZgCNKi9E/photo.jpg?sz=512"], ["created_at", "2014-11-24 06:54:19.921538"], ["email", "steveono@gmail.com"], ["name", "Steve Ono"], ["provider", "google_oauth2"], ["uid", "108751959776616224101"], ["updated_at", "2014-11-24 06:54:19.921538"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 128ms (ActiveRecord: 9.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-24 01:54:19 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered users/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 93ms (Views: 91.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-24 01:54:20 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-24 01:54:20 -0500
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2014-11-24 01:54:20 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-24 01:54:20 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-24 01:54:20 -0500
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2014-11-24 01:54:20 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-24 01:54:20 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-24 01:54:20 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-24 01:54:20 -0500
+
+
+Started GET "/signout" for 127.0.0.1 at 2014-11-24 01:54:24 -0500
+Processing by UsersController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-24 01:54:24 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+  Rendered users/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 149ms (Views: 147.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2014-11-24 01:54:25 -0500
+(google_oauth2) Request phase initiated.
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2014-11-24 01:54:25 -0500
+(google_oauth2) Request phase initiated.
+
+
+Started GET "/auth/google_oauth2/callback?state=4e1f23f6814557da82f3b3afa33a6f5a9848d8e1452525dd&code=4/vc9d_szdEmLNZpZjd-gYgt0Ro6n_xGHFL6owhVjjAds.Yk_YpoD6oVwbJvIeHux6iLaTkyzBkwI" for 127.0.0.1 at 2014-11-24 01:54:26 -0500
+(google_oauth2) Callback phase initiated.
+Processing by UsersController#create as HTML
+  Parameters: {"state"=>"4e1f23f6814557da82f3b3afa33a6f5a9848d8e1452525dd", "code"=>"4/vc9d_szdEmLNZpZjd-gYgt0Ro6n_xGHFL6owhVjjAds.Yk_YpoD6oVwbJvIeHux6iLaTkyzBkwI", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."provider" = 'google_oauth2' AND "users"."uid" = '108751959776616224101' LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-24 01:54:26 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  Rendered users/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 72ms (Views: 70.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-24 01:54:26 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-24 01:54:26 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-24 01:54:26 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-24 01:54:26 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-24 01:54:26 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-24 01:54:26 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-24 01:54:26 -0500
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2014-11-24 01:54:26 -0500
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2014-11-24 01:54:26 -0500

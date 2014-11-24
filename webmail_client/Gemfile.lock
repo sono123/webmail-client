@@ -136,9 +136,9 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
   dotenv-rails
+  faraday
   jbuilder (~> 2.0)
   jquery-rails
-  oauth2
   omniauth-google-oauth2
   pg
   rails (= 4.1.6)

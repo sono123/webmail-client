@@ -26,11 +26,12 @@ ActiveRecord::Schema.define(version: 20141104003322) do
   end
 
   create_table "users", force: true do |t|
-    t.string   "name"
     t.string   "email"
-    t.string   "photo"
-    t.string   "oauthtoken"
-    t.string   "oauthrefresh"
+    t.string   "password_digest"
+    t.string   "name"
+    t.string   "avatar"
+    t.string   "provider"
+    t.string   "uid"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
